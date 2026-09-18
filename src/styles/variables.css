@@ -1,0 +1,160 @@
+:root {
+  /* Brand blues */
+  --color-primary: #1e40af;
+  --color-primary-dark: #16326b;
+  --color-secondary: #3b82f6;
+  --color-accent: #2563eb;
+  --color-accent-2: #0ea5e9;
+  --color-bg-light-blue: #eff6ff;
+
+  /* Neutrals */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f9fafb;
+  --color-border: #e5e7eb;
+  --color-heading: #111827;
+  --color-body: #374151;
+  --color-muted: #6b7280;
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #0f2360 0%, #1e40af 55%, #2563eb 100%);
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Radii & shadows */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.06);
+  --shadow-md: 0 8px 24px rgba(17, 24, 39, 0.08);
+  --shadow-lg: 0 20px 45px rgba(30, 64, 175, 0.14);
+  --shadow-blue: 0 12px 28px rgba(37, 99, 235, 0.25);
+
+  /* Layout */
+  --container-width: 1180px;
+  --nav-height: 76px;
+}
+
+/* Site-wide color theme, switchable via the announcement bar dropdown (persisted in localStorage) */
+:root[data-theme='purple'] {
+  --color-primary: #6d28d9;
+  --color-primary-dark: #4c1d95;
+  --color-secondary: #a855f7;
+  --color-accent: #7c3aed;
+  --color-accent-2: #c026d3;
+  --color-bg-light-blue: #f5f3ff;
+  --gradient-brand: linear-gradient(135deg, #6d28d9 0%, #a855f7 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #2e1065 0%, #6d28d9 55%, #7c3aed 100%);
+  --shadow-blue: 0 12px 28px rgba(124, 58, 237, 0.25);
+}
+
+:root[data-theme='green'] {
+  --color-primary: #047857;
+  --color-primary-dark: #065f46;
+  --color-secondary: #10b981;
+  --color-accent: #059669;
+  --color-accent-2: #0d9488;
+  --color-bg-light-blue: #ecfdf5;
+  --gradient-brand: linear-gradient(135deg, #047857 0%, #10b981 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #022c22 0%, #047857 55%, #059669 100%);
+  --shadow-blue: 0 12px 28px rgba(5, 150, 105, 0.25);
+}
+
+:root[data-theme='orange'] {
+  --color-primary: #c2410c;
+  --color-primary-dark: #9a3412;
+  --color-secondary: #f97316;
+  --color-accent: #ea580c;
+  --color-accent-2: #f59e0b;
+  --color-bg-light-blue: #fff7ed;
+  --gradient-brand: linear-gradient(135deg, #c2410c 0%, #f97316 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #431407 0%, #c2410c 55%, #ea580c 100%);
+  --shadow-blue: 0 12px 28px rgba(234, 88, 12, 0.25);
+}
+
+:root[data-theme='pink'] {
+  --color-primary: #be185d;
+  --color-primary-dark: #9d174d;
+  --color-secondary: #ec4899;
+  --color-accent: #db2777;
+  --color-accent-2: #f43f5e;
+  --color-bg-light-blue: #fdf2f8;
+  --gradient-brand: linear-gradient(135deg, #be185d 0%, #ec4899 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #500724 0%, #be185d 55%, #db2777 100%);
+  --shadow-blue: 0 12px 28px rgba(219, 39, 119, 0.25);
+}
+
+:root[data-theme='black'] {
+  --color-primary: #18181b;
+  --color-primary-dark: #000000;
+  --color-secondary: #52525b;
+  --color-accent: #111111;
+  --color-accent-2: #3f3f46;
+  --color-bg-light-blue: #f4f4f5;
+  --gradient-brand: linear-gradient(135deg, #111111 0%, #3f3f46 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #000000 0%, #18181b 55%, #27272a 100%);
+  --shadow-blue: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+:root[data-theme='cyan'] {
+  --color-primary: #0e7490;
+  --color-primary-dark: #164e63;
+  --color-secondary: #22d3ee;
+  --color-accent: #06b6d4;
+  --color-accent-2: #0891b2;
+  --color-bg-light-blue: #ecfeff;
+  --gradient-brand: linear-gradient(135deg, #0e7490 0%, #22d3ee 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #083344 0%, #0e7490 55%, #06b6d4 100%);
+  --shadow-blue: 0 12px 28px rgba(6, 182, 212, 0.25);
+}
+
+/* Custom client color codes, each tinted/shaded off the supplied brand hex */
+:root[data-theme='91ae6e'] {
+  --color-primary: #546540;
+  --color-primary-dark: #3d492e;
+  --color-secondary: #91ae6e;
+  --color-accent: #667a4d;
+  --color-accent-2: #809961;
+  --color-bg-light-blue: #f4f7f1;
+  --gradient-brand: linear-gradient(135deg, #546540 0%, #91ae6e 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #242c1c 0%, #546540 55%, #667a4d 100%);
+  --shadow-blue: 0 12px 28px rgba(102, 122, 77, 0.25);
+}
+
+:root[data-theme='249d8f'] {
+  --color-primary: #155b53;
+  --color-primary-dark: #0f423c;
+  --color-secondary: #249d8f;
+  --color-accent: #196e64;
+  --color-accent-2: #208a7e;
+  --color-bg-light-blue: #e9f5f4;
+  --gradient-brand: linear-gradient(135deg, #155b53 0%, #249d8f 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #092724 0%, #155b53 55%, #196e64 100%);
+  --shadow-blue: 0 12px 28px rgba(25, 110, 100, 0.25);
+}
+
+:root[data-theme='c7d3c0'] {
+  --color-primary: #737a6f;
+  --color-primary-dark: #545951;
+  --color-secondary: #c7d3c0;
+  --color-accent: #8b9486;
+  --color-accent-2: #afbaa9;
+  --color-bg-light-blue: #f9fbf9;
+  --gradient-brand: linear-gradient(135deg, #737a6f 0%, #c7d3c0 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #323530 0%, #737a6f 55%, #8b9486 100%);
+  --shadow-blue: 0 12px 28px rgba(139, 148, 134, 0.25);
+}
+
+:root[data-theme='b4d3d9'] {
+  --color-primary: #687a7e;
+  --color-primary-dark: #4c595b;
+  --color-secondary: #b4d3d9;
+  --color-accent: #7e9498;
+  --color-accent-2: #9ebabf;
+  --color-bg-light-blue: #f8fbfb;
+  --gradient-brand: linear-gradient(135deg, #687a7e 0%, #b4d3d9 100%);
+  --gradient-brand-dark: linear-gradient(160deg, #2d3536 0%, #687a7e 55%, #7e9498 100%);
+  --shadow-blue: 0 12px 28px rgba(126, 148, 152, 0.25);
+}

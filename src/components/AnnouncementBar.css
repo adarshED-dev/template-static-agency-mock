@@ -1,0 +1,129 @@
+.announcement-bar {
+  background: var(--gradient-brand);
+  color: #fff;
+  font-size: 0.85rem;
+  position: relative;
+  padding: 5px 0;  
+  z-index: 110;
+}
+
+.announcement-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 24px;
+  flex-wrap: wrap;
+}
+
+.announcement-bar-message {
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.announcement-bar-message a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 700;
+}
+
+.announcement-color-picker {
+  position: relative;
+  margin-left: auto;
+}
+
+.announcement-color-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.announcement-color-trigger:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.announcement-color-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  flex-shrink: 0;
+}
+
+.announcement-color-chevron {
+  font-size: 0.7rem;
+  line-height: 1;
+  transition: transform 0.15s ease;
+}
+
+.announcement-color-chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.announcement-color-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  padding: 6px;
+  min-width: 150px;
+  max-height: 320px;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  z-index: 120;
+}
+
+.announcement-color-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: none;
+  border: none;
+  color: var(--color-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.announcement-color-option:hover {
+  background: var(--color-bg-alt);
+}
+
+.announcement-color-option[aria-selected='true'] {
+  color: var(--color-primary);
+}
+
+.announcement-color-check {
+  margin-left: auto;
+  color: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  .announcement-bar-inner {
+    justify-content: flex-start;
+  }
+
+  .announcement-bar-message {
+    flex: 1 1 auto;
+    text-align: left;
+  }
+}
